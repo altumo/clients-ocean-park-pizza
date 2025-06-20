@@ -1,6 +1,12 @@
 name = 'clients-ocean-park-pizza'
 compatibility_date = "2025-06-20"
 
+# Build configuration
+[build]
+command = "npm run build"
+cwd = "."
+
+# Static assets configuration
 [assets]
 directory = "./dist"
 include = ["**/*"]
