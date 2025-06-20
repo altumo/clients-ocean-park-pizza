@@ -1,0 +1,134 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Container styles for layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.span-24 {
+    width: 100%;
+}
+
+/* Top menu styling */
+.top_menu {
+    width: 700px;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.top_menu .button {
+    width: 180px;
+    height: 30px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 3px #4d4d4d;
+    float: right;
+    margin-left: 10px;
+    padding-top: 6px;
+    font-size: 130%;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    cursor: pointer;
+}
+
+.top_menu .green {
+    background: #fceabb;
+    background: linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+}
+
+.top_menu .button.blue {
+    background: #6db3f2;
+    background: linear-gradient(top, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);
+}
+
+/* Top bar styling */
+.top_bar {
+    width: 70vw;
+    min-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #6db3f2;
+    background: linear-gradient(top, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);
+    margin-bottom: 15px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+/* Menu container styling */
+.menu_container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu_container h1 {
+    font-size: 200%;
+    font-weight: bold;
+    color: #6C312E;
+}
+
+.menu_container h2 {
+    font-size: 150%;
+    font-weight: bold;
+    color: #6C312E;
+}
+
+.menu_container img {
+    padding-bottom: 20px;
+    padding-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menu image styling */
+.menuImage {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .top_menu {
+        width: 90%;
+        text-align: center;
+    }
+    
+    .top_menu .button {
+        float: none;
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    .top_bar {
+        width: 90%;
+    }
+    
+    .menuImage {
+        max-width: 100%;
+    }
+}
