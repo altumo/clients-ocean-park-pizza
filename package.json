@@ -1,0 +1,12 @@
+{
+  "name": "ocean-park-pizza",
+  "version": "1.0.0",
+  "description": "Ocean Park Pizza Walnut Grove website",
+  "scripts": {
+    "build": "echo 'No build required - static site'",
+    "start": "echo 'Static site - open index.html'"
+  },
+  "keywords": ["static", "website", "restaurant"],
+  "author": "Altumo",
+  "license": "MIT"
+}
