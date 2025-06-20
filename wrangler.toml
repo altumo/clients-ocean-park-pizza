@@ -1,0 +1,7 @@
+name = "ocean-park-pizza"
+compatibility_date = "2025-06-20"
+
+[assets]
+directory = "."
+include = ["index.html", "styles.css", "images/**/*", "_redirects"]
+exclude = ["source-brochure/**/*", ".git/**/*", ".claude/**/*", "CLAUDE.md", "package.json", "wrangler.toml"]
