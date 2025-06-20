@@ -16,13 +16,14 @@ function App() {
         <div className="container">
           <div className="span-24 heading">
             <div className="top_menu">
-              <div id="contact_us_button" className="button green">
+              <button 
+                className="contact-button"
+                onClick={() => window.open('mailto:oceanparkpizza@myyahoo.com', '_blank')}
+                aria-label="Contact Ocean Park Pizza via email"
+              >
+                <span className="contact-icon">📧</span>
                 Contact Us
-              </div>
-              
-              <div id="download_pdf_menu_button" className="button blue">
-                Download Menu
-              </div>
+              </button>
             </div>
             
             <div className="top_bar"></div>

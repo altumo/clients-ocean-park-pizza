@@ -25,39 +25,81 @@ body {
 
 /* Top menu styling */
 .top_menu {
-    width: 700px;
-    min-height: 50px;
+    width: 100%;
+    max-width: 700px;
+    min-height: 70px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.top_menu .button {
-    width: 180px;
-    height: 30px;
-    border-radius: 9px;
-    box-shadow: 1px 1px 3px #4d4d4d;
-    float: right;
-    margin-left: 10px;
-    padding-top: 6px;
-    font-size: 130%;
-    font-weight: bold;
-    color: #FFF;
-    text-align: center;
-    text-shadow: 1px 1px 1px #000000;
-    cursor: pointer;
+/* Modern Contact Button */
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
+    border-radius: 50px;
+    box-shadow: 
+        0 8px 32px rgba(102, 126, 234, 0.4),
+        0 4px 16px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    outline: none;
+    min-width: 200px;
 }
 
-.top_menu .green {
-    background: #fceabb;
-    background: linear-gradient(to bottom, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+.contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 40px rgba(102, 126, 234, 0.5),
+        0 8px 24px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
 }
 
-.top_menu .button.blue {
-    background: #6db3f2;
-    background: linear-gradient(to bottom, #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%);
+.contact-button:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 4px 16px rgba(102, 126, 234, 0.4),
+        0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:focus {
+    outline: 3px solid rgba(102, 126, 234, 0.3);
+    outline-offset: 2px;
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.contact-button:hover::before {
+    left: 100%;
+}
+
+.contact-icon {
+    font-size: 20px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
 /* Top bar styling */
@@ -116,13 +158,17 @@ body {
 @media (max-width: 768px) {
     .top_menu {
         width: 90%;
-        text-align: center;
+        padding: 0 20px;
     }
     
-    .top_menu .button {
-        float: none;
-        display: inline-block;
-        margin: 5px;
+    .contact-button {
+        min-width: 180px;
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+    
+    .contact-icon {
+        font-size: 18px;
     }
     
     .top_bar {
@@ -131,5 +177,18 @@ body {
     
     .menuImage {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-button {
+        min-width: 160px;
+        padding: 12px 24px;
+        font-size: 15px;
+        gap: 8px;
+    }
+    
+    .contact-icon {
+        font-size: 16px;
     }
 }
